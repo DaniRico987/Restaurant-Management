@@ -1,7 +1,10 @@
+import ContainerProduct from "./components/containerProduct/containerProduct";
+
 export default function HomePage() {
   return (
-    <div>
-      <h2>Home Page</h2>
+    <div className="p-5 flex flex-col flex-wrap justify-center align-middle gap-5">
+      <ContainerProduct category="Hamburguesas" />
+      <ContainerProduct category="Perros" />
     </div>
   );
 }

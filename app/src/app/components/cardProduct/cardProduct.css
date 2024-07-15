@@ -1,0 +1,16 @@
+.titleProduct {
+  color: #ffffff;
+  font-family: judson;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.price {
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.description {
+  color: #ffba08;
+  font-size: 16px;
+}
