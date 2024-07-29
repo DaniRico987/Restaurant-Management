@@ -5,8 +5,21 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: judson;
-  font-style: italic;
+}
+
+.font-LYLAS {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-style: normal;
+}
+
+.font-Lacquer {
+  font-family: "Lacquer", system-ui;
+  font-style: normal;
+}
+
+.font-LexendExa {
+  font-family: "Lexend Exa", sans-serif;
+  font-style: normal;
 }
 
 body {
