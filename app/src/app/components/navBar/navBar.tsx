@@ -1,16 +1,35 @@
 "use client";
 // components/navBar/navBar.js
 import Link from "next/link";
-import { useState } from "react"; // Importa useState si aún no está importado
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  // Ejemplo de estado para los números de mesa y pedido
-  const [mesa, setMesa] = useState(3); // Valor inicial de mesa
-  const [pedido, setPedido] = useState(0); // Valor inicial de pedido
+  const [mesa, setMesa] = useState(3);
+  const [pedido, setPedido] = useState(0);
   const [contadorCesta, setContadorCesta] = useState(99);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="bg-[#FAA307] p-4 flex justify-between items-center fixed top-0 left-0 right-0 z-[1000] h-[80px]">
+    <nav
+      className={`p-4 flex justify-between items-center fixed top-0 left-0 right-0 z-[1000] h-[80px] transition-colors duration-300 ${
+        scrolled ? "bg-[#FAA307]" : "bg-black bg-opacity-30"
+      }`}
+    >
       <div className="flex items-center">
         <Link href="/">
           <img
@@ -35,8 +54,8 @@ const Navbar = () => {
             className="bg-black text-white rounded-full w-6 h-6 flex items-center justify-center"
             style={{
               position: "absolute",
-              top: "45px", // Ajusta según sea necesario
-              right: "10px", // Ajusta según sea necesario
+              top: "45px",
+              right: "10px",
               zIndex: 10,
             }}
           >
