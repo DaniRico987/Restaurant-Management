@@ -1,16 +1,7 @@
 .containerProduct {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  border-radius: 20px;
-  padding: 10px;
-  max-width: fit-content;
-}
-
-.titleContainer {
-  color: #ffffff;
-  text-align: left;
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 1px solid #ffffff;
+  gap: 10px 25px;
+  max-width: 100%;
+  padding: 0 20px;
 }
