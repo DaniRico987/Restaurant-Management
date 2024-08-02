@@ -4,7 +4,6 @@ import "./containerProduct.css";
 interface Product {
   id: string;
   name: string;
-  description: string;
   price: number;
 }
 
@@ -17,29 +16,37 @@ const ContainerProduct: React.FC<CardProductProps> = ({ category }) => {
     {
       id: "1",
       name: "Sencilla",
-      description:
-        "Carne de res + lechuga + tomate + cebolla + pepinillos + queso + salsa especial",
       price: 14500,
     },
     {
       id: "2",
       name: "Doble",
-      description:
-        "2 carne de res + lechuga + tomate + cebolla + pepinillos + queso + salsa especial",
       price: 15000,
     },
     {
       id: "3",
       name: "Triple",
-      description:
-        "3 carne de res + lechuga + tomate + cebolla + pepinillos + queso + salsa especial",
+      price: 20000,
+    },
+    {
+      id: "4",
+      name: "Sencilla",
+      price: 14500,
+    },
+    {
+      id: "5",
+      name: "Doble",
+      price: 15000,
+    },
+    {
+      id: "6",
+      name: "Triple",
       price: 20000,
     },
   ];
 
   return (
-    <div className="containerProduct">
-      <h2 className="titleContainer">{category}:</h2>
+    <div className="containerProduct">  
         {products.map((product) => (
           <CardProduct key={product.id} product={product} />
         ))}

@@ -3,7 +3,6 @@ import "./cardProduct.css";
 interface Product {
   id: string;
   name: string;
-  description: string;
   price: number;
 }
 
@@ -19,12 +18,12 @@ const CardProduct: React.FC<CardProductProps> = ({ product }) => {
   };
 
   return (
-    <div className="cursor-pointer">
-      <h3 className="titleProduct">{product.name}</h3>
-      <div className="detailsProduct flex justify-center align-middle gap-2">
-        <p className="description">{product.description}</p>
-        <p className="price">${formatPrice(product.price)}</p>
-      </div>
+    <div className="detailsProduct">
+      <img src="/img/hamburgerMain.jpg" alt={product.name} />
+      <h3 className="titleProduct font-Lacquer">
+        {product.name.toLowerCase()}
+      </h3>
+      <p className="price font-LexendExa">${formatPrice(product.price)}</p>
     </div>
   );
 };

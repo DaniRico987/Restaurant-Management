@@ -1,14 +1,22 @@
+.detailsProduct {
+  max-width: 200px;
+  display: flex;
+  flex-flow: wrap column;
+  background: #03071e;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .titleProduct {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 32px;
+  flex: 1;
 }
 
 .price {
-  color: #ffffff;
-  font-size: 32px;
-}
-
-.description {
-  color: #ffba08;
-  font-size: 16px;
+  color: #03071e;
+  background: #faa307;
+  font-size: 28px;
+  flex: 1;
 }

@@ -1,11 +1,10 @@
 .containerProduct {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
   border-radius: 20px;
-  flex-flow: wrap column;
-  background: #03071e;
-  padding: 20px;
+  padding: 10px;
+  max-width: fit-content;
 }
 
 .titleContainer {
