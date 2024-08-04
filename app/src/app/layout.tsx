@@ -6,8 +6,8 @@ import Navbar from "./components/navBar/navBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Restaurant Project",
-  description: "Restaurant Project",
+  title: "Restaurant Proyect",
+  description: "Restaurant Proyect",
 };
 
 interface RootLayoutProps {
@@ -18,10 +18,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap"
+        rel="stylesheet"
+      />
       </head>
       <body className={inter.className}>
         <Navbar />
@@ -30,4 +44,3 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   );
 }
-
