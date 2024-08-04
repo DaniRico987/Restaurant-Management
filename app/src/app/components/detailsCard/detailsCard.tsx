@@ -76,13 +76,10 @@ const DetailsCard: FC<DetailsCardProps> = ({ product, isVisible, onClose }) => {
 
         {/* Imagen de fondo */}
         <div className="relative flex justify-center items-center infoBox ">
-          <Image
+          <img
             src="/img/hamburger.jpg"
             alt='Hamburger'
-            objectFit='cover'
             className='rounded-2xl'
-            width={250}
-            height={300}
           />
           {/* Texto informativo */}
           {isInfoVisible && (

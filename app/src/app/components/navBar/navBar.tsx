@@ -34,7 +34,7 @@ const Navbar = () => {
     >
       <div className="flex items-center">
         <Link href="/">
-          <Image
+          <img
             src="/img/hamburgerIcon.png"
             alt="Hamburger Icon"
             width={80}
@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="text-white mr-8">Pedido: {pedido}</div>
       <div className="flex items-center">
         <Link href="/pages/shopping">
-          <Image
+          <img
             src="/img/basketIcon.png"
             alt="Basket Icon"
             width={40}
