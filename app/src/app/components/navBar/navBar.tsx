@@ -1,7 +1,8 @@
 "use client";
 // components/navBar/navBar.js
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import Image from "next/image";
+import { useState } from "react"; // Importa useState si aún no está importado
 
 const Navbar = () => {
   const [mesa, setMesa] = useState(3);
@@ -32,7 +33,7 @@ const Navbar = () => {
     >
       <div className="flex items-center">
         <Link href="/">
-          <img
+          <Image
             src="/img/hamburgerIcon.png"
             alt="Hamburger Icon"
             width={80}
@@ -44,7 +45,7 @@ const Navbar = () => {
       <div className="text-white mr-8">Pedido: {pedido}</div>
       <div className="flex items-center">
         <Link href="/pages/shopping">
-          <img
+          <Image
             src="/img/basketIcon.png"
             alt="Basket Icon"
             width={40}

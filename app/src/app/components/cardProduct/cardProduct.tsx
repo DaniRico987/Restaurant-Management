@@ -1,4 +1,6 @@
+
 import "./cardProduct.css";
+
 
 interface Product {
   id: string;
@@ -11,11 +13,14 @@ interface CardProductProps {
 }
 
 const CardProduct: React.FC<CardProductProps> = ({ product }) => {
+
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("es-ES", {
       style: "decimal",
     }).format(price);
   };
+
 
   return (
     <div className="detailsProduct">
