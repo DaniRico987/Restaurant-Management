@@ -7,7 +7,6 @@ import { useEffect, useState } from "react"; // Importa useState si aÃºn no estÃ
 
 const Navbar = () => {
   const [mesa, setMesa] = useState(3);
-  const [pedido, setPedido] = useState(0);
   const [contadorCesta, setContadorCesta] = useState(99);
   const [scrolled, setScrolled] = useState(false);
 
@@ -43,7 +42,6 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="text-white flex ml-auto mr-4">Mesa: {mesa}</div>
-      <div className="text-white mr-8">Pedido: {pedido}</div>
       <div className="flex items-center">
         <Link href="/pages/shopping">
           <img
