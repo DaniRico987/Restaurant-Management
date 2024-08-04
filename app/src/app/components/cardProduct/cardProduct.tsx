@@ -51,7 +51,7 @@ const CardProduct: React.FC<CardProductProps> = ({ product }) => {
         animate={controls}
         style={{ originX: 0.5, originY: 0.5 }}
       >
-        <Image src="/img/hamburgerMain.jpg" alt={product.name} width={200} height={200} priority={true} style={{ width: "200px", height: "auto" }} />
+        <img src="/img/hamburgerMain.jpg" alt={product.name}/>
         <h3 className="titleProduct font-Lacquer">
           {product.name.toLowerCase()}
         </h3>
