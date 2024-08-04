@@ -5,16 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import DetailsCard from "../detailsCard/detailsCard";
 import "./cardProduct.css";
-
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-}
-
-interface CardProductProps {
-  product: Product;
-}
+import { CardProductProps } from "../../interfases/cardProduct.interfase";
 
 const CardProduct: React.FC<CardProductProps> = ({ product }) => {
   const [isModalVisible, setModalVisible] = useState(false);

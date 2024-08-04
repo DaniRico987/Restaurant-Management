@@ -2,15 +2,9 @@
 
 import { FC, useState } from 'react';
 import './addingSwitch.css';
+import { SwitchGroupProps } from '../../../interfases/addingSwitch.interface';
 
-interface SwitchItem {
-  id: string;
-  label: string;
-}
 
-interface SwitchGroupProps {
-  items: SwitchItem[];
-}
 
 const SwitchGroup: FC<SwitchGroupProps> = ({ items = [] }) => {
   const [switchStates, setSwitchStates] = useState<Record<string, boolean>>(

@@ -5,18 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import './detailsCard.css';
 import SwitchGroup from './addingSwitch/addingSwitch';
-
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-}
-
-interface DetailsCardProps {
-  product: Product;
-  isVisible: boolean;
-  onClose: () => void;
-}
+import { DetailsCardProps } from '../../interfases/detailsCard.inteface';
 
 const DetailsCard: FC<DetailsCardProps> = ({ product, isVisible, onClose }) => {
   const [isInfoVisible, setInfoVisible] = useState(false);

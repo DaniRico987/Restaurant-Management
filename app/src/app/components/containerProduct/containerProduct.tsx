@@ -1,15 +1,7 @@
 import CardProduct from "../cardProduct/cardProduct";
 import "./containerProduct.css";
+import { Product,CardProductProps } from "../../interfases/containerProducts.inteface";
 
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-}
-
-interface CardProductProps {
-  category: string;
-}
 
 const ContainerProduct: React.FC<CardProductProps> = ({ category }) => {
   const products: Product[] = [
