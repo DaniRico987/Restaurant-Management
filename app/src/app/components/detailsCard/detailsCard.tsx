@@ -63,8 +63,8 @@ const DetailsCard: FC<DetailsCardProps> = ({ product, isVisible, onClose }) => {
       <div className="relative p-6 rounded-3xl shadow-lg mx-4 md:mx-6 detailsCard border-2">
         {/* Título y botón de cierre de la tarjeta de detalles */}
         <div className='mb-4 flex justify-between border-b-2 border-white pb-2'>
-          <h2 className="text-xl mx-1 text-white">{product.name}</h2>
-          <button className="mx-2 text-2xl mb-2" onClick={handleCloseClick}>
+          <h2 className="text-2xl mx-1 text-white flex items-center justify-center font-Lacquer">{product.name.toLowerCase()}</h2>
+          <button className="mx-3 text-2xl mb-3" onClick={handleCloseClick}>
             <Image 
               src="/close.svg"
               alt="Close"
@@ -82,11 +82,11 @@ const DetailsCard: FC<DetailsCardProps> = ({ product, isVisible, onClose }) => {
             className='rounded-2xl'
             width={300} // Ancho deseado
             height={200} // Altura deseada
-            layout="responsive" // Opcional: para mantener la relación de aspecto
+            priority={true}
           />
           {/* Texto informativo */}
           {isInfoVisible && (
-            <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 rounded-2xl'>
+            <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 rounded-2xl font-LYLAS'>
               <p className='Info text-white p-4 rounded-lg'>
               Aqui va la descripcion del producto
               </p>
@@ -121,13 +121,13 @@ const DetailsCard: FC<DetailsCardProps> = ({ product, isVisible, onClose }) => {
         <SwitchGroup items={switchItems} />
         {/* Precio del producto */}
         <div className='flex items-center justify-center'>
-          <p className=" text-2xl mt-2 mb-2 p-4 rounded-tl-xl rounded-bl-xl priceContainer buyElement text-center">${formatPrice(product.price)}</p>
+          <p className=" text-2xl mt-2 mb-2 p-4 rounded-tl-xl rounded-bl-xl priceContainer buyElement text-center font-LexendExa">${formatPrice(product.price)}</p>
           <button className="text-2xl mt-2 mb-2 p-2 rounded-tr-xl rounded-br-xl addContainer buyElement flex items-center justify-center" onClick={handleCloseClick}>
             <Image
             src="/shoppingCar.svg"
             alt='add'
-            width={30}
-            height={30}
+            width={40}
+            height={40}
             />
           </button>
         </div>

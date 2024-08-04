@@ -33,7 +33,7 @@ const SwitchGroup: FC<SwitchGroupProps> = ({ items = [] }) => {
     {items.map((item) => (
       <div key={item.id} className="flex items-center space-x-4">
         <label className="flex items-center cursor-pointer space-x-2">
-          <span className="text-white">{item.label}</span>
+          <span className="text-white font-LYLAS">{item.label}</span>
           <input
             type="checkbox"
             checked={switchStates[item.id]}

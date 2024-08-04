@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 * {
   padding: 0;
@@ -27,3 +27,9 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+

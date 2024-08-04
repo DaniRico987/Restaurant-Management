@@ -38,17 +38,20 @@ const Navbar = () => {
             alt="Hamburger Icon"
             width={80}
             height={80}
+            priority={true}
           />
         </Link>
       </div>
       <div className="text-white flex ml-auto mr-4">Mesa: {mesa}</div>
       <div className="flex items-center">
         <Link href="/pages/shopping">
-          <img
+          <Image
             src="/img/basketIcon.png"
             alt="Basket Icon"
+            className="img-responsive"
             width={40}
             height={40}
+            priority={true}
           />
           <span
             className="bg-black text-white rounded-full w-6 h-6 flex items-center justify-center"
