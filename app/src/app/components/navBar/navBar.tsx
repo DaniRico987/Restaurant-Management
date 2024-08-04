@@ -34,7 +34,7 @@ const Navbar = () => {
     >
       <div className="flex items-center">
         <Link href="/">
-          <img
+          <Image
             src="/img/hamburgerIcon.png"
             alt="Hamburger Icon"
             width={80}
