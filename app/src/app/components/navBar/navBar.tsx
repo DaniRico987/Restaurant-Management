@@ -2,7 +2,8 @@
 // components/navBar/navBar.js
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react"; // Importa useState si aún no está importado
+import { useEffect, useState } from "react"; // Importa useState si aún no está importado
+
 
 const Navbar = () => {
   const [mesa, setMesa] = useState(3);

@@ -8,7 +8,6 @@ import SwitchGroup from './addingSwitch/addingSwitch';
 interface Product {
   id: string;
   name: string;
-  description: string;
   price: number;
 }
 
@@ -89,7 +88,7 @@ const DetailsCard: FC<DetailsCardProps> = ({ product, isVisible, onClose }) => {
           {isInfoVisible && (
             <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 rounded-2xl'>
               <p className='Info text-white p-4 rounded-lg'>
-                {product.description}
+              Aqui va la descripcion del producto
               </p>
             </div>
           )}
