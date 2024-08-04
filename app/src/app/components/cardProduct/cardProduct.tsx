@@ -38,7 +38,7 @@ const CardProduct: React.FC<CardProductProps> = ({ product }) => {
 
   return (
     <div className="detailsProduct" onClick={handleOpenModal}>
-      <Image src="/img/hamburgerMain.jpg" alt={product.name} width={200} height={20} priority={true}/>
+      <Image src="/img/hamburgerMain.jpg" alt={product.name} width={200} height={200} priority={true} style={{width: "200",height: "auto"}}/>
       <h3 className="titleProduct font-Lacquer">
         {product.name.toLowerCase()}
       </h3>
