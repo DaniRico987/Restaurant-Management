@@ -1,0 +1,40 @@
+.detailsCard {
+    background-color: #370617;
+    border-color: #FFBA08;
+}
+
+.Info {
+    color: #FFBA08;
+}
+
+.addContainer {
+    background-color: #FFBA08;
+    color: #03071E;
+}
+
+.priceContainer {
+    background-color: #03071E;
+    color: #ffffff;
+}
+
+.buyElement {
+    width: 9rem;
+    height: 4rem;
+}
+
+.detailsCard {
+    max-height: 80vh; /* Ajusta la altura máxima del modal */
+    overflow-y: scroll; /* Permite el desplazamiento vertical */
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+  }
+  
+  .detailsCard::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari y Opera */
+  }
+
+  .infoBox {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }

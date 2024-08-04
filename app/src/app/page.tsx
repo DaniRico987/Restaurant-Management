@@ -1,5 +1,6 @@
 import CarruselCategories from "./components/carruselCategories/carruselCategories";
 import ContainerProduct from "./components/containerProduct/containerProduct";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
