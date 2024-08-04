@@ -1,19 +1,20 @@
 "use client";
 // components/navBar/navBar.js
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react"; // Importa useState si aún no está importado
 
 const Navbar = () => {
   // Ejemplo de estado para los números de mesa y pedido
   const [mesa, setMesa] = useState(3); // Valor inicial de mesa
   const [pedido, setPedido] = useState(0); // Valor inicial de pedido
-  const [contadorCesta, setContadorCesta] = useState(99);
+  const [contadorCesta, setContadorCesta] = useState(0);
 
   return (
     <nav className="bg-[#FAA307] p-4 flex justify-between items-center fixed top-0 left-0 right-0 z-[1000] h-[80px]">
       <div className="flex items-center">
         <Link href="/">
-          <img
+          <Image
             src="/img/hamburgerIcon.png"
             alt="Hamburger Icon"
             width={80}
@@ -25,7 +26,7 @@ const Navbar = () => {
       <div className="text-white mr-8">Pedido: {pedido}</div>
       <div className="flex items-center">
         <Link href="/pages/shopping">
-          <img
+          <Image
             src="/img/basketIcon.png"
             alt="Basket Icon"
             width={40}
