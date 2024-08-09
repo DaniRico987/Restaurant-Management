@@ -18,10 +18,7 @@ const DetailsCard: FC<DetailsCardProps> = ({ product, isVisible, onClose }) => {
       controls.start({
         opacity: 1,
         scale: 1,
-        transition: {
-          delay: 0.05, // Reduce el delay a 0.25 segundos
-          duration: 0.5, // Ajusta la duración si es necesario
-        },
+        transition: { duration: 0.5 },
       }).then(() => {
         setShowOverlay(true);
       });
