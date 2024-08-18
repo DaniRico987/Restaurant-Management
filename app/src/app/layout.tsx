@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "./components/navBar/navBar";
-import { RootLayoutProps } from "./interfases/layout.interface";
+import { RootLayoutProps } from "./interfaces/layout.interface";
 import Footer from "./components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,7 +10,6 @@ export const metadata = {
   title: "Restaurant Proyect",
   description: "Restaurant Proyect",
 };
-
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
