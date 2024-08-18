@@ -1,8 +1,8 @@
 export interface Product {
-    id: string;
-    name: string;
-    price: number;
-  }
+  productId: string;
+  productName: string;
+  productPrice: number;
+}
   
 export interface DetailsCardProps {
     product: Product;

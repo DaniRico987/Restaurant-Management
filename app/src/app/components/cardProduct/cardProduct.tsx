@@ -1,39 +1,21 @@
 "use client";
 
-import { motion, useAnimation } from 'framer-motion';
-import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DetailsCard from "../detailsCard/detailsCard";
 import "./cardProduct.css";
-import { CardProductProps } from "../../interfases/cardProduct.interfase";
+import { CardProductProps } from "@/app/interfaces/cardProduct.interface";
+import { GlobalContext } from "@/app/services/GlobalContext";
 
 const CardProduct: React.FC<CardProductProps> = ({ product }) => {
   const [isModalVisible, setModalVisible] = useState(false);
-  const [isCardFlipped, setCardFlipped] = useState(false);
-  const controls = useAnimation();
+  const { categoryId } = useContext(GlobalContext);
 
   const handleOpenModal = () => {
-    // ...
-    controls.start({
-      rotateY: 180,
-      scale: 1.2,
-      opacity: 0,
-      transition: { duration: 0.5 },
-    }).then(() => {
-      setModalVisible(true);
-    });
+    setModalVisible(true);
   };
 
   const handleCloseModal = () => {
     setModalVisible(false);
-    controls.start({
-      rotateY: 0,
-      scale: 1,
-      opacity: 1, // Restablece la opacidad a 1 para que sea visible
-      transition: { duration: 0.5 },
-    }).then(() => {
-      setCardFlipped(false);
-    });
   };
 
   const formatPrice = (price: number) => {
@@ -44,21 +26,28 @@ const CardProduct: React.FC<CardProductProps> = ({ product }) => {
 
   return (
     <>
-      <motion.div
-        className={`detailsProduct ${isCardFlipped ? 'flipped' : ''}`}
+      <div
+        className={`${
+          product.categoryId != categoryId
+            ? "none"
+            : "detailsProduct p-1 text-center flex flex-wrap flex-col rounded-xl"
+        }`}
         onClick={handleOpenModal}
-        initial={{ scale: 1 }}
-        animate={controls}
-        style={{ originX: 0.5, originY: 0.5 }}
       >
-        <img src="/img/hamburgerMain.jpg" alt={product.name}/>
-        <h3 className="titleProduct font-Lacquer">
-          {product.name.toLowerCase()}
+        <img src="/img/hamburgerMain.jpg" alt={product.productName} />
+        <h3 className="titleProduct pr-1 pl-1 flex justify-center text-center font-Lacquer">
+          {product.productName.toLowerCase()}
         </h3>
-        <p className="price font-LexendExa">${formatPrice(product.price)}</p>
-      </motion.div>
+        <p className="price font-LexendExa flex justify-center text-center pr-1 pl-1">
+          ${formatPrice(product.productPrice)}
+        </p>
+      </div>
 
-      <DetailsCard product={product} isVisible={isModalVisible} onClose={handleCloseModal} />
+      <DetailsCard
+        product={product}
+        isVisible={isModalVisible}
+        onClose={handleCloseModal}
+      />
     </>
   );
 };
