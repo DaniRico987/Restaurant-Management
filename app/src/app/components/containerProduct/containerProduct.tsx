@@ -14,7 +14,6 @@ const ContainerProduct: React.FC<CardProductProps> = () => {
     const loadProducts = async () => {
       try {
         const fetchedProducts = await getProducts();
-        console.log(fetchedProducts);
         setProducts(fetchedProducts);
       } catch (err) {
         console.error(err);
