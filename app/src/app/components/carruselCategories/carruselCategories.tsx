@@ -8,10 +8,13 @@ import { GlobalContext } from "@/app/services/GlobalContext";
 
 const CarruselCategories: React.FC = () => {
   const { categoryId, setCategoryId } = useContext(GlobalContext);
-  const [categories, setCategories] = useState<Category[]>([]);
+  const { categories, setCategories } = useContext(GlobalContext);
 
   useEffect(() => {
     const loadCategories = async () => {
+      if (categories.length > 0) {
+        return;
+      }
       try {
         const fetchedCategories = await getCategories();
         setCategories(fetchedCategories);
