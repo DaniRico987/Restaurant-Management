@@ -11,10 +11,10 @@ const CarruselCategories: React.FC = () => {
   const { categories, setCategories } = useContext(GlobalContext);
 
   useEffect(() => {
+    if (categories.length > 0) {
+      return;
+    }
     const loadCategories = async () => {
-      if (categories.length > 0) {
-        return;
-      }
       try {
         const fetchedCategories = await getCategories();
         setCategories(fetchedCategories);

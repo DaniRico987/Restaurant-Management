@@ -11,10 +11,10 @@ const ContainerProduct: React.FC<CardProductProps> = () => {
   const { products, setProducts } = useContext(GlobalContext);
 
   useEffect(() => {
+    if (products.length > 0) {
+      return;
+    }
     const loadProducts = async () => {
-      if (products.length > 0) {
-        return;
-      }
       try {
         const fetchedProducts = await getProducts();
         setProducts(fetchedProducts);
